@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+
+    <item android:id="@+id/action_add_person" android:title="@string/action_add_person"
+        android:icon="@mipmap/ic_person_add_white_24dp"
+        android:orderInCategory="100" app:showAsAction="always"
+        />
+    <item android:id="@+id/action_notification" android:title="@string/action_add_person"
+        android:icon="@mipmap/ic_notifications_none_white_24dp"
+        android:orderInCategory="100" app:showAsAction="always"
+        />
+    <item android:id="@+id/action_security" android:title="@string/action_security"
+        android:icon="@mipmap/ic_security_white_24dp"
+        android:orderInCategory="100" app:showAsAction="always"
+        />
+
+    <item android:id="@+id/action_remove" android:title="@string/action_security"
+        android:icon="@mipmap/ic_delete_white_24dp"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:visible="false"
+        />
+    <item android:id="@+id/action_location_off" android:title="@string/action_security"
+        android:icon="@mipmap/ic_location_off_white_24dp"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:visible="false"
+        />
+
+    <item android:id="@+id/action_profile" android:title="@string/action_profile"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+    <item android:id="@+id/action_setting" android:title="@string/action_setting"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+    <item android:id="@+id/action_logou" android:title="@string/action_logout"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+
+
+
+</menu>

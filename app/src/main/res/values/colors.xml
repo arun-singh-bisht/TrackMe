@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fb6e52</color>
+    <color name="colorPrimaryDark">#e9573e</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="color_gray_light">#e4e2e2</color>
+    <color name="color_gray_light_2">#c9c6c6</color>
+    <color name="color_gray_dark">#616161</color>
+    <color name="colorPrimary_transparent">#e6fb6e52</color>
+    <color name="colorWhite_transparent">#F2ffffff</color>
+
+    <color name="color_notification_new_yellow">#ffdb76</color>
+
+
+
+
+
+</resources>

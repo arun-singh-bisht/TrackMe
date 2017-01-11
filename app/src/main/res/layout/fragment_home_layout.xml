@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.teramatrix.slidingpanel.SlidingUpPanelLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="195dp"
+        sothree:umanoParallaxOffset="300dp"
+        sothree:umanoScrollableView="@+id/list_view"
+        sothree:umanoShadowHeight="4dp">
+
+
+        <!-- MAIN CONTENT -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/lay_location_history"
+                layout="@layout/location_history_layout"
+                android:visibility="gone"></include>
+
+            <RelativeLayout
+                android:id="@+id/lay_all_friends_locations_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lay_records_list_summery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="12dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_male_shadow_fill_circle_512" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="You"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="1 min. ago"
+                                android:textColor="@android:color/holo_blue_dark"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/txt_atm_branch_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="66/154 Heera path, Mansarovar, Jaipur"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/line_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lay_records_list_summery"
+                    android:background="@color/color_gray_light" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_all_friends_locations_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lay_bharat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="12dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_male_shadow_fill_circle_512" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bharat"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="5 min. ago"
+                                android:textColor="@android:color/holo_blue_dark"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Near Vasi, Mumbai"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lay_records_list_summery"
+                    android:background="@color/color_gray_light" />
+
+                <LinearLayout
+                    android:id="@+id/lay_roshan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="12dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_male_shadow_fill_circle_512" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Roshan"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="just now"
+                                android:textColor="@android:color/holo_blue_dark"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Paanch Batti, M.I Road, Jaipur"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lay_records_list_summery"
+                    android:background="@color/color_gray_light" />
+
+                <LinearLayout
+                    android:id="@+id/lay_bitu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="12dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_male_shadow_fill_circle_512" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bitu"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="3 min. ago"
+                                android:textColor="@android:color/holo_blue_dark"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="MacDonald, Element Mall, Ajmer Road, Jaipur"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lay_records_list_summery"
+                    android:background="@color/color_gray_light" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </in.teramatrix.slidingpanel.SlidingUpPanelLayout>
+</com.flipboard.bottomsheet.BottomSheetLayout>

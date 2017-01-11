@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Track Me</string>
+    <string name="google_map_api_key">AIzaSyAB1og5t83ByRxQWHgZtjxtOl1aPaMvD-4</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_setting">Setting</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_security">Security</string>
+    <string name="action_add_person">Add Person</string>
+    <string name="action_notification">Notification</string>
+</resources>

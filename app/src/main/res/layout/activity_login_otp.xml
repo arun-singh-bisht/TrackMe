@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/people_on_the_road"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary_transparent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_back_white_24dp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="OTP"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Know where are your close ones"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/ic_panorama_fish_eye_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Track real time location of a friend"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/ic_panorama_fish_eye_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Geofance interest points and get realtime alerts"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite_transparent"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:drawablePadding="10dp"
+                android:hint="Enter received OTP"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:theme="@style/ColorAccentSupplier" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/btn_submit_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_number"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rect_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Submit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend OTP"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_submit_otp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
